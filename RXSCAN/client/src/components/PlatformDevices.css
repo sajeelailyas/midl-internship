@@ -1,0 +1,206 @@
+/* Platform Section */
+.platform-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #f9fafb;
+}
+
+.platform-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.platform-section p {
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin-bottom: 3rem;
+}
+
+.platform-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.platform-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.platform-card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+}
+
+.web-icon {
+  background: #3b82f6;
+}
+
+.mobile-icon {
+  background: #f97316;
+}
+
+.desktop-icon {
+  background: #3b82f6;
+}
+
+.platform-mockup {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.mockup-browser {
+  width: 200px;
+  height: 120px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mockup-header {
+  background: #e5e7eb;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.mockup-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.mockup-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #9ca3af;
+}
+
+.mockup-content {
+  display: flex;
+  height: 100px;
+}
+
+.mockup-sidebar {
+  width: 40px;
+  background: #d1d5db;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+}
+
+.mockup-nav-item {
+  height: 8px;
+  background: #9ca3af;
+  border-radius: 2px;
+}
+
+.mockup-main {
+  flex: 1;
+  padding: 8px;
+}
+
+.mockup-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+
+.mockup-card {
+  height: 20px;
+  background: #e5e7eb;
+  border-radius: 4px;
+}
+
+.mockup-phone {
+  width: 80px;
+  height: 140px;
+  background: #1f2937;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.mockup-screen {
+  background: white;
+  height: 100%;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.mockup-search {
+  height: 16px;
+  background: #f3f4f6;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.mockup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mockup-item {
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 2px;
+}
+
+.mockup-desktop {
+  width: 180px;
+  height: 100px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.mockup-window {
+  background: white;
+  height: 100%;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.mockup-waveform {
+  height: 20px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+
+.mockup-controls {
+  height: 16px;
+  background: #f3f4f6;
+  border-radius: 2px;
+}
+
+.platform-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.platform-card p {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+

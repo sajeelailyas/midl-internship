@@ -1,0 +1,144 @@
+.enterprise-security-section {
+  padding: 80px 20px;
+  background: #f9fafb;
+}
+
+.enterprise-security-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.enterprise-security-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .enterprise-security-content {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.enterprise-security-text {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.enterprise-security-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .enterprise-security-title {
+    font-size: 2.5rem;
+  }
+}
+
+.enterprise-security-intro {
+  font-size: 1.125rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+}
+
+.enterprise-security-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.enterprise-security-features li {
+  padding: 16px 0;
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.enterprise-security-features li:not(:last-child) {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.feature-icon {
+  color: #1e40af;
+  font-size: 1.25rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.enterprise-security-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.security-whitepaper-box {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 40px 32px;
+  text-align: center;
+  width: 100%;
+  max-width: 280px;
+}
+
+.security-whitepaper-icon {
+  width: 64px;
+  height: 64px;
+  background: #1e40af;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  color: white;
+}
+
+.security-whitepaper-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+}
+
+.save-time-section {
+  padding: 80px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.save-time-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.save-time-title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .save-time-title {
+    font-size: 3rem;
+  }
+}
+
+.save-time-description {
+  font-size: 1.125rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
