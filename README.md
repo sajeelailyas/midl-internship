@@ -1,4 +1,4 @@
-# midl-internship
+# MIDL-Internship
 
 Two mini projects live inside this repo:
 
@@ -53,6 +53,11 @@ GOOGLE_CLIENT_ID=xxxxx.apps.googleusercontent.com
 GOOGLE_CLIENT_SECRET=xxxxxx
 API_URL=http://localhost:5000
 JWT_SECRET=super-secret
+```
+`googleAuth/frontend/.env`
+```
+VITE_GOOGLE_CLIENT_ID=your-client-id.apps.googleusercontent.com
+REACT_APP_API_URL=http://localhost:5000
 ```
 
 `googleAuth/frontend/src/config/env.js`
@@ -113,6 +118,6 @@ npm run preview
 npm run start   # runs node server.js
 ```
 
-That’s it. Clone, set envs, run the scripts, and tweak as needed for your submission. Have fun!
+That’s it. Clone, set envs, run the scripts.
 
 
