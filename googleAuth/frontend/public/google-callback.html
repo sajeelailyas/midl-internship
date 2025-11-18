@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Auth Callback</title>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        <h2>Processing Google Authentication...</h2>
+        <p>Please wait while we complete your sign-in.</p>
+    </div>
+
+    <script>
+        // Get the authorization code from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        const error = urlParams.get('error');
+        const state = urlParams.get('state');
+
+        if (error) {
+            // Send error to parent window
+            window.opener.postMessage({
+                type: 'GOOGLE_AUTH_ERROR',
+                error: error
+            }, window.location.origin);
+            window.close();
+        } else if (code && state === 'google_auth') {
+            // Exchange code for ID token
+            fetch('http://localhost:5000/api/auth/google/callback', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ code: code })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Store auth data and redirect back
+                    localStorage.setItem('googleAuthData', JSON.stringify({
+                        idToken: data.idToken,
+                        user: data.user
+                    }));
+                    window.location.href = '/';
+                } else {
+                    // Store error and redirect back
+                    localStorage.setItem('googleAuthError', data.error || 'Authentication failed');
+                    window.location.href = '/';
+                }
+            })
+            .catch(error => {
+                console.error('Callback error:', error);
+                localStorage.setItem('googleAuthError', 'Network error during authentication');
+                window.location.href = '/';
+            });
+        } else {
+            // Invalid parameters
+            localStorage.setItem('googleAuthError', 'Invalid authentication parameters');
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>

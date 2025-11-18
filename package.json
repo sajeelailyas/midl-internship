@@ -1,0 +1,20 @@
+{
+  "name": "internship-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install": "npm run install:googleAuth && npm run install:rxscan",
+    "install:googleAuth": "npm install --prefix googleAuth/backend && npm install --prefix googleAuth/frontend",
+    "install:rxscan": "npm install --prefix RXSCAN && npm install --prefix RXSCAN/client && npm install --prefix RXSCAN/server",
+    "dev:ga-backend": "npm --prefix googleAuth/backend run dev",
+    "dev:ga-frontend": "npm --prefix googleAuth/frontend run dev -- --port 3000",
+    "dev:rx-backend": "npm --prefix RXSCAN/server run dev",
+    "dev:rx-frontend": "npm --prefix RXSCAN/client run dev",
+    "start": "concurrently \"npm run dev:ga-backend\" \"npm run dev:ga-frontend\" \"npm run dev:rx-backend\" \"npm run dev:rx-frontend\""
+  },
+  "dependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
+
+
